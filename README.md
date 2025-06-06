@@ -13,12 +13,10 @@ Example PHP-FPM 8.3+ & Nginx 1.26+ container image for Docker, built on [Alpine 
   with `docker logs -f <container name>`)
 * Follows the KISS principle (Keep It Simple, Stupid) to make it easy to understand and adjust the image to your needs
 
-
 ## Goal of this project
 
 The goal of this container image is to provide a base image for running Nginx and PHP-FPM in a container which follows
 the best practices and is easy to understand and modify to your needs.
-
 
 ## Usage
 
@@ -47,14 +45,29 @@ docker run -itd -p 80:8080 --name alpine-php -v ~/my-codebase:/var/www/project a
 ```
 
 ### 3. Confirm if it works well.
+
 Will See the PHP info on http://localhost if success. Please replace `localhost` by your own IP or domain.
 
+### 4. Enter the container.
+
+```shell
+docker exec -it alpine-php sh
+```
+
+### 5. Check logs or run command from host.
+
+```shell
+docker logs -f alpine-php
+```
+
+```shell
+docker exec -it alpine-test4 composer install
+```
 
 ## Configuration
 
 In [config/](config/) you'll find the default configuration files for Nginx, PHP and PHP-FPM.
 If you want to extend or customize that you can just modify and change it.
-
 
 ## Documentation and examples
 

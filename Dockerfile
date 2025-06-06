@@ -78,7 +78,7 @@ RUN mkdir -p /var/www/project/public && \
     chown -R nobody:nobody /var/www/project /run /var/lib/nginx /var/log/nginx && \
     echo '<?php phpinfo(); ?>' > /var/www/project/public/index.php && \
     php -v && \
-    php -m \
+    php -m
 
 # Switch to use a non-root user from here on
 USER nobody

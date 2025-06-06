@@ -26,7 +26,6 @@ Edit your nginx.conf file.
 
 > Check [Nginx configuration](../config/nginx.conf) for more help:
 
-
 ```nginx
 server {
     listen [::]:443 ssl;
